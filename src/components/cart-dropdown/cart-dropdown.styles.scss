@@ -22,12 +22,7 @@
       flex-direction: column;
       overflow-y: scroll
     }
-  .cart-items::-webkit-scrollbar{
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    width: .8em;
-    background-color: darkgrey;
-    outline: 1px solid slategrey;
-  }
+ 
     button {
       margin-top: auto;
     }
