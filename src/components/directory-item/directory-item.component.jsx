@@ -1,22 +1,26 @@
-import './category-item.styles.scss'
+import { Link } from 'react-router-dom'
+import './directory-item.styles.scss'
 
-const CategoryItem =({category})=>{
+const DirectoryItem =({category})=>{
     const {imageUrl, title} = category
     return(
-        <div className='category-container' >
+      
+        <Link className='directory-item-container' to={`/shop/${title}`} >
+       
         <div
           className='background-image'
           style={{
             backgroundImage: `url(${imageUrl})`,
           }}
         ></div>
-        <div className='category-body-container'>
+        <div className='body'>
           <h2>{title.toLocaleUpperCase()}</h2>
           <p>{'Shop now'.toLocaleUpperCase()}</p>
         </div>
-      </div>
-    
+        
+      </Link>
+      
     )
 }
 
-export default CategoryItem
+export default DirectoryItem
